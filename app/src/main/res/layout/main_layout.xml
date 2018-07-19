@@ -43,7 +43,7 @@
             android:src="@mipmap/ic_launcher"/>
     </RelativeLayout>
 
-    <!--<LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -66,7 +66,7 @@
             android:focusable="true"
             android:background="#5474d7"
             android:text="text4"/>
-    </LinearLayout>-->
+    </LinearLayout>
 
     <View
         android:id="@+id/focusBox"

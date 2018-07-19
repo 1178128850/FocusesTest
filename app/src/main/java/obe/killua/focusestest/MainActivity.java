@@ -21,9 +21,9 @@ public class MainActivity extends Activity implements View.OnFocusChangeListener
         super.onCreate(savedInstanceState);
         viewDataBinding = DataBindingUtil.setContentView(this, R.layout.main_layout);
         viewDataBinding.text1.setOnFocusChangeListener(this);
-        viewDataBinding.text2.setOnFocusChangeListener(this);/*
+        viewDataBinding.text2.setOnFocusChangeListener(this);
         viewDataBinding.text3.setOnFocusChangeListener(this);
-        viewDataBinding.text4.setOnFocusChangeListener(this);*/
+        viewDataBinding.text4.setOnFocusChangeListener(this);
     }
 
     @Override
