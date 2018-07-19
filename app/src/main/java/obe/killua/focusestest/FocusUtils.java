@@ -59,6 +59,25 @@ public class FocusUtils {
         animatorSet.start();
     }
 
+    public static void focusView(final View focusBox, final View newFocus, final float outSide, final float scale){
+        focusBox.setVisibility(View.INVISIBLE);
+        float newWidth = newFocus.getWidth()+outSide*2;
+        float newHeight = newFocus.getHeight()+outSide*2;
+        focusBox.getLayoutParams().width = (int) newWidth;
+        focusBox.getLayoutParams().height = (int) newHeight;
+        focusBox.requestLayout();
+        focusBox.post(new Runnable() {
+            @Override
+            public void run() {
+                focusBox.setX(getParentX(newFocus,newFocus.getX())-outSide);
+                focusBox.setY(getParentY(newFocus,newFocus.getY())-outSide);
+                focusBox.setScaleX(scale);
+                focusBox.setScaleY(scale);
+                focusBox.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+
     public static float getParentX(View view,float x){
         ViewParent parent = view.getParent();
         if(parent != null){
